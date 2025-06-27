@@ -62,7 +62,7 @@ Once the server is running, you can access:
   - Fetching GitHub data
   - Custom parameter search
 
-... to be done 
+... to be continued
 
 ---
 
