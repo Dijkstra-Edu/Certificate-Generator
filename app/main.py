@@ -1,9 +1,17 @@
+import os
+import sys
+
+# Add the 'app' folder to sys.path so absolute imports work
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+
 import uvicorn
 import httpx
 from fastapi import FastAPI, Request, HTTPException
-from Settings.logging_config import setup_logging
+from settings.logging_config import setup_logging
 from Entities.SearchParams import SearchParams
-from Controllers import MainController 
+from Controllers import MainController
+
+
 
 app = FastAPI()
 

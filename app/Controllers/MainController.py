@@ -10,5 +10,5 @@ async def getGitHubData(userName: str, params: SearchParams):
         return GitHubService.getAllGitHubData(userName)
 
 # POST Commands
-async def postDownloadCertificate (userName: str):
+async def postDownloadCertificate(userName: str):
     return CertificateGeneratorService.mainCertificateGeneratorService(userName)

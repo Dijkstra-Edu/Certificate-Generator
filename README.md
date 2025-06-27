@@ -1,63 +1,75 @@
-# Contributing to Certificate-Generator
+# 🎓 Certificate-Generator
 
-Thank you for your interest in contributing to **Certificate-Generator**!  
-This tool helps generate personalized certificates in bulk according to the user's requirements.  
-Please read the following guidelines to ensure a smooth contribution process.
+**Certificate-Generator** is a FastAPI-powered backend application that generates personalized certificates in based on user data. It includes API endpoints to retrieve GitHub data and download certificates — perfect for automating certificates in bulk for events, competitions etc.
 
-## 🛠 How to Contribute
+---
 
-1. **Fork the repository**: Click on the **Fork** button at the top right corner of this page.  
-2. **Clone your fork**:  
-   ```sh
-   git clone https://github.com/your-username/Certificate-Generator.git
-   ```
-3. **Create a new branch**:  
-   ```sh
-   git checkout -b feature/your-feature-name
-   ```
-4. **Add your code** following the structure below:  
-   - Each feature or module should follow the existing folder structure and naming conventions.  
-   - Add comments and keep your code clean and modular.  
-   - Add your changes in logical, clearly labeled commits.
+## 💻 Getting Started
 
-> Note: Make sure to use the existing file and folder structure as a reference while contributing!
+To run this project locally, ensure you have **Python 3.10+** installed.
 
-5. **Commit your changes**: Use the following format for commit messages:  
-   ```sh
-   git commit -m "Code #num - Creator/Edited - Date - commit #num"
-   ```
-   or for explanations:  
-   ```sh
-   git commit -m "Explanation #num - Creator/Edited - Date - commit #num"
-   ```
-6. **Push your branch**:  
-   ```sh
-   git push origin feature/your-feature-name
-   ```
-7. **Create a Pull Request (PR)**: Go to the repository on GitHub and click **"New Pull Request"**.
+Clone the repository and navigate into the project folder:
 
-## 📌 Contribution Guidelines
+```bash
+git clone https://github.com/your-username/Certificate-Generator.git
+cd Certificate-Generator
+```
 
-- **Follow the folder and file structure** as outlined above.  
-- **Commit Messages**: Ensure that commit messages follow the specified format.  
-- **Pull Requests**: Keep PRs focused and limited to a single feature, fix, or explanation.  
-- **Discussions**: Use GitHub Issues for bug reports, feature requests, or discussions before implementing major changes.  
-- **Documentation**: Ensure that any added explanations are clear and formatted properly.
+Create and activate a virtual environment:
 
-> Note: Make sure to use the existing format as reference while writing down your explanations!
+```bash
+python -m venv venv
+.\venv\Scripts\activate        # On Windows
+# OR
+source venv/bin/activate       # On macOS/Linux
+```
 
-## 🚀 Issue Tracking
+Install the required dependencies:
 
-- If you find an issue with an existing module or have a suggestion, please [open an issue](https://github.com/Dijkstra-Edu/Certificate-Generator/issues).  
-- When reporting issues, include relevant details such as file/module name, expected vs. actual behavior, and any language-specific concerns.
+```bash
+pip install -r requirements.txt
+```
+
+If `requirements.txt` is missing or incomplete, install dependencies manually:
+
+```bash
+pip install fastapi uvicorn httpx python-dotenv
+```
+
+Then, start the FastAPI server:
+
+```bash
+python -m uvicorn app.main:app --reload
+```
+
+You should see:
+
+```
+Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+```
+
+---
+
+## 🧪 Using the API
+
+Once the server is running, you can access:
+
+- **API Root:** `http://127.0.0.1:8000`
+- **Interactive Docs (Swagger UI):**  
+  👉 `http://127.0.0.1:8000/docs`  
+  Use this to test endpoints for:
+  - Downloading a certificate
+  - Fetching GitHub data
+  - Custom parameter search
+
+... to be done 
+
+---
 
 ## 📜 License
 
-By contributing, you agree that your contributions will be licensed under the repository's license.
+This project is released under the repository’s license.
 
-## 💬 Need Help?
+---
 
-If you have any questions, feel free to open an issue or start a discussion in the repository.
-
-Happy coding! 🎉  
 
