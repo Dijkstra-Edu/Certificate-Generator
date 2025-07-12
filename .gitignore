@@ -2,4 +2,6 @@ app.log
 ./__pycache__
 *.pyc
 *.pyo
-venv
+*.py[cod]
+venv/
+.env/
