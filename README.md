@@ -71,5 +71,3 @@ Once the server is running, you can access:
 This project is released under the repository’s license.
 
 ---
-
-
